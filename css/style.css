@@ -153,7 +153,13 @@ a { color: inherit; }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  background: radial-gradient(circle at 50% 0%, #241c15 0%, var(--ink) 65%);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(36,28,21,0.55) 0%, rgba(23,19,16,0.88) 65%),
+    linear-gradient(180deg, rgba(23,19,16,0.55) 0%, rgba(23,19,16,0.85) 70%, var(--ink) 100%),
+    url('/images/hero-eternal-courage-virgin-mary-1.jpg');
+  background-size: cover, cover, cover;
+  background-position: center, center, center 20%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   padding: 96px 0 88px;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
