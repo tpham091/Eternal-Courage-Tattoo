@@ -38,7 +38,7 @@
 
   document.querySelectorAll('[data-local-gallery]').forEach(function (gallery) {
     var missing = { 1287: true, 1301: true, 1302: true, 1315: true };
-    var photos = ['IMG_1255.JPG'];
+    var photos = ['tattoo-gothic-portrait.png', 'tattoo-taz.png', 'IMG_1255.JPG'];
 
     for (var number = 1256; number <= 1319; number += 1) {
       if (!missing[number]) photos.push('IMG_' + number + '.PNG');
