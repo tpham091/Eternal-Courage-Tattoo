@@ -36,31 +36,27 @@
     }
   });
 
-  document.querySelectorAll('[data-drive-gallery]').forEach(function (gallery) {
-    var photos;
-    try {
-      photos = JSON.parse(gallery.getAttribute('data-drive-gallery'));
-    } catch (error) {
-      return;
+  document.querySelectorAll('[data-local-gallery]').forEach(function (gallery) {
+    var missing = { 1287: true, 1301: true, 1302: true, 1315: true };
+    var photos = ['IMG_1255.JPG'];
+
+    for (var number = 1256; number <= 1319; number += 1) {
+      if (!missing[number]) photos.push('IMG_' + number + '.PNG');
     }
 
-    photos.forEach(function (photo, index) {
+    photos.forEach(function (filename, index) {
       var item = document.createElement('li');
       var image = document.createElement('img');
-      var caption = document.createElement('span');
 
       item.className = 'gallery-item';
-      image.src = 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(photo.id) + '&sz=w1200';
+      image.src = '/images/gallery/' + filename;
       image.width = 1200;
       image.height = 900;
       image.alt = 'Eternal Courage Tattoo gallery photo ' + (index + 1);
       image.loading = 'lazy';
       image.decoding = 'async';
-      caption.className = 'cap mono';
-      caption.textContent = photo.name.replace(/\.[^.]+$/, '').replace('_', ' ');
 
       item.appendChild(image);
-      item.appendChild(caption);
       gallery.appendChild(item);
     });
   });
