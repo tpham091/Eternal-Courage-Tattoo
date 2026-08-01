@@ -13,8 +13,6 @@
     - IMG_1256.PNG   # 4
     - IMG_1257.PNG   # 5
     - IMG_1258.PNG   # 6
-    - IMG_1303.PNG   # 48
-    - IMG_1305.PNG   # 50
     - IMG_1318.PNG   # 62
     - IMG_1319.PNG   # 63
 
@@ -58,7 +56,9 @@
   bio: >-
     Custom tattoo work at Eternal Courage Tattoo in San Antonio. Browse recent pieces below, then reach out to book.
   photos:
+    - IMG_1303.PNG   # 48
     - IMG_1304.PNG   # 49
+    - IMG_1305.PNG   # 50
     - IMG_1306.PNG   # 51
     - IMG_1307.PNG   # 52
     - IMG_1308.PNG   # 53
